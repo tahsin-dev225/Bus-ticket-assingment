@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Ticket Assingment</title>
+    <!-- css -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- daisy -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body class="font-raleway">
+    <header class="mb-32 w-10/12 mx-auto mt-6">
+        <nav class="flex justify-between items-center my-4">
+            <h1 class="text-4xl font-bold">P-Ticket</h1>
+            <div class="flex justify-between font-light text-black">
+                <a class="mx-3" href="#">Home</a>
+                <a class="mx-3" href="#">About</a>
+                <a class="mx-3" href="#select-section">Destination</a>
+                <a class="mx-3" href="#">Search</a>
+            </div>
+            <button class="btn border-2 text-xl bg-lime-50 border-lime-500 px-5 text-lime-600">Bus <img src="images/bus-icon.png" alt=""></button>
+        </nav>
+
+        <div class="banner my-5 rounded-3xl bg-no-repeat lg:bg-cover mx-auto bg-[url(images/banner.png)] relative">
+            <div class="flex w-auto flex-col justify-center items-center py-36">
+                <h1 class="text-6xl text-center text-white font-bold"> End-to-End Travel with </h1>
+            <h1 class="text-5xl text-center my-5 text-[#1DD100] font-bold"> P Paribahan </h1>
+            <p class="font-extralight text-sm text-white text-center mx-auto w-5/12">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+
+            <button onclick="buyTickets()" id="buy-tickets" class="btn bg-[#1DD100] text-xl font-bold my-8 "><a href="#select-section">Buy Tickets</a></button>
+            </div>
+        </div>
+        <div class="flex justify-center gap-6 absolute bottom-2 left-0 right-0">
+            <div class="flex gap-5 p-6 border-slate-200 border-2 px-10 bg-white rounded-2xl border-b-8 border-b-lime-600">
+                <div class=""><img src="images/people.png" alt=""></div>
+                <div class="">
+                    <h3 class="text-2xl py-2 font-bold">500K+</h3>
+                    <p class="font-light">Registered users</p>
+                </div>
+            </div>
+            <div class="flex gap-5 border-slate-200 border-2 p-6 px-10 bg-white rounded-2xl border-b-8 border-b-lime-600">
+                <div class=""><img src="images/ticket-cupon.png" alt=""></div>
+                <div class="">
+                    <h3 class="text-2xl py-2 font-bold">500K+</h3>
+                    <p class="font-light">Registered users</p>
+                </div>
+            </div>
+            <div class="flex gap-5  p-6 px-10 bg-white rounded-2xl border-b-8 border-b-lime-600">
+                <div class=""><img src="images/stoppage.png" alt=""></div>
+                <div class="">
+                    <h3 class="text-2xl py-2 font-bold">500K+</h3>
+                    <p class="font-light">Registered users</p>
+                </div>
+            </div>
+            
+        </div>
+
+    </header>
+    <main class="w-10/12 mx-auto mt-6">
+        <section class="offer">
+            <h1 class="text-[40px] text-center my-5 font-bold">Best offers for you</h1>
+            <div class=" flex justify-center gap-5">
+                <div class="flex bg-[#FFBF0F] rounded-3xl items-center w-5/12 ">
+                    <div class="py-10 px-14 border-r-4 border-dotted relative">
+                        <h1 class="text-3xl font-bold">15% OFF</h1>
+                        <p class="text-lg font-semibold">on your next purchase</p>
+                        <p class="font-light">use by January 2024</p>
+                        <!-- circle -->
+                        <div class="h-8 w-8 bg-white rounded-full absolute top-[-14px] right-[-17px]  "></div>
+                        <div class="h-8 w-8 bg-white rounded-full absolute bottom-[-14px] right-[-17px]   "></div>
+                    </div>
+                    <div class="py-10 px-14">
+                        <h1 class="text-2xl font-bold">NEW15</h1>
+                        <p class="fond-light">Coupon Code</p>
+                    </div>
+                </div>
+                <div class="flex bg-[#F78C9C] rounded-3xl items-center w-5/12 ">
+                    <div class="py-10 px-14 border-r-4 border-dotted relative">
+                        <h1 class="text-3xl font-bold">15% OFF</h1>
+                        <p class="text-lg font-semibold">on your next purchase</p>
+                        <p class="font-light">use by January 2024</p>
+                        <!-- circle -->
+                        <div class="h-8 w-8 bg-white rounded-full absolute top-[-14px] right-[-17px]  "></div>
+                        <div class="h-8 w-8 bg-white rounded-full absolute bottom-[-14px] right-[-17px]   "></div>
+                    </div>
+                    <div class="py-10 px-14">
+                        <h1 class="text-2xl font-bold">NEW15</h1>
+                        <p class="fond-light">Coupon Code</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex my-9 justify-center items-cente">
+                <button onclick="second()" class="btn text-green-400 text-xl font-bold border-2 my-5  mx-auto text-center  border-green-300 px-5">See All Offers</button>
+            </div>
+        </section>
+
+        <section class="paribahan rounded-t-[90px] pt-14 pb-7 bg-[#F7F8F8]">
+            <h1 class="text-2xl font-bold text-center my-6">P.H Paribahan</h1>
+            <p class="text-center font-light w-6/12  mx-auto">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+
+            <div class="bg-white rounded-2xl flex justify-between  w-11/12 mx-auto">
+                <div class="p-6 flex flex-col w-10/12 px-14 border-r-4 border-dotted border-r-green-400">
+                    <div class="flex justify-between">
+                        <div class="flex gap-2">
+                            <img src="images/bus-logo.png" alt="">
+                        <div class="">
+                            <h1 class="text-2xl font-bold">Greenline Paribahan</h1>
+                            <p class="  text-[#030712]">Coach-009-WEB ! AC_Business</p>
+                        </div>
+                        </div>
+                        <!-- 40 seat button -->
+                        <button class="btn bg-green-50 text-green-500 font-semibold text-xl "> <span id="seat-left">40</span> <span>Seats left</span>
+                        </button>
+                    </div>
+                    <div class="bg-gray-100 p-7 mt-5 rounded-2xl">
+                        <div class="flex justify-between items-center border-b-2 border-dotted border-green-3   00 py-5">
+                            <h1 class="text-xl font-semibold">Route</h1>
+                            <h3 class="text-xl font-bold">Dhaka - Sylhet</h3>
+                        </div>
+                        <div class="flex justify-between border-b-2 border-dotted border-green-300 items-center py-5">
+                            <h1 class="text-xl font-semibold">Departure Time</h1>
+                            <h3 class="text-xl font-bold">9:00 PM</h3>
+                        </div>
+                        <div class="flex justify-between  gap-5 items-center py-5">
+                            <h1 class="text-base font-semibold bg-gray-300 rounded-3xl  py-4 px-6">Boarding Point - Laxmipur</h1>
+                            <h1 class="text-base font-semibold bg-gray-300 rounded-3xl  py-4 px-6">Dropping Point - Bogura</h1>
+                            <h1 class="text-base font-semibold bg-gray-300 rounded-3xl  py-4 px-6">Est. Time - 11 Hour</h1>
+                        </div>
+                        
+                    </div>
+
+                </div>
+                <div class="space-y-5 px-8 flex flex-col justify-center items-center">
+                    <img src="images/fare.png" alt="">
+                    <h1 class="text-2xl font-bold">550 Taka</h1>
+                    <p class="text-xl font-medium">Per seat</p>
+                </div>
+            </div>
+        </section>
+<!-- select seat -->
+        <section id="select-section" class="select-seat p-4 pt-14 pb-7  grid grid-cols-10">
+            <!-- AVAILABE SIDE -->
+            <div class="col-span-6 p-5 border-r-2 border-dotted border-r-gray-600">
+                <h1 class="text-2xl font-bold">Select Your Seat</h1>
+                <div class="flex justify-between my-5">
+                    <div class="flex mr-3">
+                        <img src="images/seat-gray.png" alt="">
+                        <p class="text-lg font-medium ml-3 text-gray-500">Availabe</p>
+                    </div>
+                    <div class="flex mr-3">
+                        <img src="images/seat-green.png" alt="">
+                        <p class="text-lg font-medium ml-3 text-gray-500">Availabe</p>
+                    </div>
+                </div>
+                <div class="flex justify-end my-5">
+                    <div class="flex mr-3 py-2 rounded px-8 bg-gray-300">
+                        <img src="images/seat-green.png" alt="">
+                    </div>
+                </div>
+                <!-- left side seats -->
+                 <div class="sets-container w-full  flex justify-between ">       <!-- container -->
+                     <div class="a1first w-full   space-y-2"> <!--left se -->
+                        <div class="flex justify-between  items-center">
+                            <button class="btn">A</button>
+                            <button id="a1"   class="flex mr-3 py-2 rounded w-28 justify-center font-semibold sb ">A1</button>
+                            <button id="a2"  class="flex mr-3 py-2 rounded w-28 justify-center font-semibold sb focus:bg-green-500 disabled">A2</button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="btn">B</button>
+                            <button id="b1"  class="flex mr-3 py-2 rounded w-28 justify-center font-semibold sb">B1</button>
+                            <button id="b2"  class="flex mr-3 py-2 rounded w-28 justify-center font-semibold sb ">B2</button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="btn">C</button>
+                            <button id="c1"  class="flex mr-3 py-2 rounded w-28 justify-center font-semibold sb">C1</button>
+                            <button id="c2"  class="flex mr-3 py-2 rounded w-28 justify-center font-semibold sb ">C2</button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="btn">D</button>
+                            <button id="d1"  class="flex mr-3 py-2 rounded w-28 justify-center font-semibold sb">D1</button>
+                            <button id="d2"  class="flex mr-3 py-2 rounded w-28 justify-center font-semibold sb ">D2</button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="btn">E</button>
+                            <button id="e1"  class="flex mr-3 py-2 rounded w-28 justify-center font-semibold sb">E1</button>
+                            <button id="e2"  class="flex mr-3 py-2 rounded w-28 justify-center font-semibold sb ">E2</button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="btn">F</button>
+                            <button id="f1"  class="flex mr-3 py-2 rounded w-28 justify-center font-semibold sb">F1</button>
+                            <button id="f2"  class="flex mr-3 py-2 rounded w-28 justify-center font-semibold sb ">F2</button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="btn">G</button>
+                            <button id="g1"  class="flex mr-3 py-2 rounded w-28 justify-center font-semibold sb">G1</button>
+                            <button id="g2"  class="flex mr-3 py-2 rounded w-28 justify-center font-semibold sb ">G2</button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="btn">H</button>
+                            <button id="h1"  class="flex mr-3 py-2 rounded w-28 justify-center font-semibold sb">H1</button>
+                            <button id="h2"  class="flex mr-3 py-2 rounded w-28 justify-center font-semibold sb ">H2</button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="btn">I</button>
+                            <button id="i1"  class="flex mr-3 py-2 rounded w-28 justify-center font-semibold sb">I 1</button>
+                            <button id="i2"  class="flex mr-3 py-2 rounded w-28 justify-center font-semibold sb ">I 2</button>
+                        </div>
+    
+                    </div>
+                    
+                    <!-- right side seats -->
+                    <div class="w-full">
+                        <div class="a1first flex flex-col  xl:ml-16 space-y-4">
+                            <div class="flex justify-between  items-center">
+                                
+                                <button id="a3"  class="flex mr-3 py-2 rounded ml- w-28 justify-center font-semibold sb">A3</button>
+                                <button id="a4"  class="flex mr-3 py-2 rounded ml- w-28 justify-center font-semibold sb ">A4</button>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                
+                                <button id="b3"  class="flex mr-3 py-2 rounded ml- w-28 justify-center font-semibold sb">B3</button>
+                                <button id="b4"  class="flex mr-3 py-2 rounded ml- w-28 justify-center font-semibold sb ">B4</button>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                
+                                <button id="c3"  class="flex mr-3 py-2 rounded ml- w-28 justify-center font-semibold sb">C3</button>
+                                <button id="c4"  class="flex mr-3 py-2 rounded ml- w-28 justify-center font-semibold sb ">C4</button>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <button id="d3"  class="flex mr-3 py-2 rounded ml- w-28 justify-center font-semibold sb">D3</button>
+                                <button id="d4"  class="flex mr-3 py-2 rounded ml- w-28 justify-center font-semibold sb ">D4</button>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <button id="e3"  class="flex mr-3 py-2 rounded ml- w-28 justify-center font-semibold sb">E3</button>
+                                <button id="e4"  class="flex mr-3 py-2 rounded ml- w-28 justify-center font-semibold sb ">E4</button>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <button id="f3"  class="flex mr-3 py-2 rounded ml- w-28 justify-center font-semibold sb">F3</button>
+                                <button id="f4"  class="flex mr-3 py-2 rounded ml- w-28 justify-center font-semibold sb ">F4</button>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <button id="g3"  class="flex mr-3 py-2 rounded ml- w-28 justify-center font-semibold sb">G3</button>
+                                <button id="g4"  class="flex mr-3 py-2 rounded ml- w-28 justify-center font-semibold sb ">G4</button>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <button id="h3"  class="flex mr-3 py-2 rounded ml- w-28 justify-center font-semibold sb">H3</button>
+                                <button id="h4"  class="flex mr-3 py-2 rounded ml- w-28 justify-center font-semibold sb ">H4</button>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <button id="i3"  class="flex mr-3 py-2 rounded ml- w-28 justify-center font-semibold sb">I 1</button>
+                                <button id="i4"  class="flex mr-3 py-2 rounded ml- w-28 justify-center font-semibold sb ">I 2</button>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- seat 2 -->
+            <div class=" mainconteiner col-span-4 ">
+                <h1 class="text-2xl font-bold py-3 border-b-2 border-b-gray-500 border-dotted">Select Your Seat</h1>
+                <div class="w-11/12 p-4  mx-auto">
+                    <div class="bg-gray-100 p-6  rounded-xl">
+                        <div class="flex  justify-between py-3">
+                            <h1 class="font-bold text-xl"> Seat <span class="bg-green-700 p-2 px-3 rounded-xl text-white" id="seat-count">0</span></h1>
+                            <h1 class="text-xl font-bold">Class</h1>
+                            <h1 class="text-xl font-bold">Price</h1>
+                        </div>
+                        
+                        <div id="seat-con" class="">
+                            <!-- will be added -->
+                        </div>
+                        <div class="w-full bg-gray-300 my-4 h-[2px]"></div>
+                        <div class="flex justify-between items-center text-lg font-semibold">
+                            <p>Total Price</p>
+                             <p class="">BDT <span id="ticket-total-price">0</span></p>  <!-- total price -->
+                        </div>
+                        <div class="bg-white flex justify-around my-4 items-center">
+                            <input type="text" class="py-5" name="" id="coupon" placeholder="Have any coupon?">
+                            <button id="apply" onclick="apply()" class="btn bg-green-500 text-white px-6">Apply</button>
+                        </div>
+                        <div class="flex justify-between">
+                            <p class="text-lg font-semibold">Grand Total</p>
+                            <p class="text-lg font-semibold">BDT <span id="grand-total">0</span></p>
+                        </div>
+                    </div>
+                    <div class="py-2 mt-2">
+                        <p class="text-lg font-semibold">Pessenger Name</p>
+                        <input type="text" class="p-4 w-full border border-e-gray-400 shadow rounded my-2" name="" id="" placeholder="Enter your name">
+                    </div>
+                    <div class="py-2 ">
+                        <p class="text-lg font-semibold">Phone Number*</p>
+                        <input type="text" class="p-4 w-full border border-e-gray-400 shadow rounded my-2" name="" id="" required placeholder="Enter your phone number">
+                    </div>
+                    <div class="py-2 mb-2">
+                        <p class="text-lg font-semibold">Email ID</p>
+                        <input type="text" class="p-4 w-full border border-e-gray-400 shadow rounded my-2" name="" id="" placeholder="Enter your email id">
+                    </div>
+                    <button class="btn w-full h-12 text-2xl text-white bg-[#1DD100] font-semibold">Next</button>
+                    <div class="flex justify-evenly">
+                        <a href="#" class="underline">Terms and Conditions</a>
+                        <a href="#" class="underline">Cancellation Policy</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class=" bg-black w-full text-white mt-20">
+        <div class="w-10/12 mx-auto py-12">
+            <div class="flex justify-between my-4">
+                <div class=" lg:w-4/12">
+                    <h1 class="text-3xl font-bold">P-Ticket</h1>
+                    <p class="text-white mt-3">P-Ticket is a digital platform to make your daily commuting better.</p>
+                </div>
+                <div class="w-[190px] ">
+                    <p class="text-lg font-semibold text-center">Download our app</p>
+                    <div class="flex mt-3 gap-4">
+                        <img src="images/playstore.png" alt="">
+                        <div class=""><p class="text-white font-light">Get it on </p>
+                        <div class="text-xl font-semibold">Google play</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full h-12 border-b-4 border-dotted border-gray-800">
+            </div>
+            <div class="flex justify-between my-8">
+                <p class="">@all rights reserved, P-Ticket services limited.2024</p>
+                <div class="flex gap-6">
+                    <div class="font-semibold">Terms & condition</div>
+                    <div class="font-semibold">Return & refund policy</div>
+                    <div class="font-semibold">Privacy policy</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
